@@ -1,5 +1,6 @@
-package org.example.hb_one_to_one_uni;
+package com.minvoo.hb_one_to_one_uni;
 
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -30,6 +31,13 @@ public class Instructor {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    public Instructor(String firstName, String lastName, String email, InstructorDetail instructorDetail) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.instructorDetail = instructorDetail;
     }
 
     public Long getId() {
@@ -70,5 +78,16 @@ public class Instructor {
 
     public void setInstructorDetail(InstructorDetail instructorDetail) {
         this.instructorDetail = instructorDetail;
+    }
+
+    @Override
+    public String toString() {
+        return "Instructor{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", instructorDetail=" + instructorDetail +
+                '}';
     }
 }

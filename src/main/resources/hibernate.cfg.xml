@@ -4,25 +4,19 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/hibernate_relations_remind?serverTimezone=Europe/Warsaw</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernate_mappings?serverTimezone=Europe/Warsaw</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="connection.username">root</property>
         <property name="connection.password">Password123!</property>
+
         <!-- DB schema will be updated if needed -->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
-        <mapping class="com.minvoo.relations.OneToOne.StudentIndex"></mapping>
-        <mapping class="com.minvoo.relations.OneToOne.Student"></mapping>
 
-        <mapping class="com.minvoo.relations.OneToMany.Client" />
-        <mapping class="com.minvoo.relations.OneToMany.Order" />
+        <mapping class="com.minvoo.hb_one_to_one_uni.Instructor" />
+        <mapping class="com.minvoo.hb_one_to_one_uni.InstructorDetail" />
 
-        <mapping class="com.minvoo.relations.ManyToMany.Child" />
-        <mapping class="com.minvoo.relations.ManyToMany.Parent" />
-
-        <mapping class="com.minvoo.inheritance.SpecialProduct" />
-        <mapping class="com.minvoo.compositekeys.Account" />
     </session-factory>
 </hibernate-configuration>

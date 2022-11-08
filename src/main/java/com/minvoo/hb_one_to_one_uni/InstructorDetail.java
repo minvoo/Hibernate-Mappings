@@ -1,4 +1,4 @@
-package org.example.hb_one_to_one_uni;
+package com.minvoo.hb_one_to_one_uni;
 
 import lombok.NoArgsConstructor;
 
