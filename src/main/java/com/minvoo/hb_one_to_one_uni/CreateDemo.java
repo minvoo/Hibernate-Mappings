@@ -46,6 +46,7 @@ public class CreateDemo {
             String hobby = instructor.getInstructorDetail().getHobby();
 
         } finally {
+            session.close();
             sessionFactory.close();
         }
     }

@@ -29,6 +29,7 @@ public class DeleteDemo {
             transaction.commit();
 
         } finally {
+            session.close();
             sessionFactory.close();
         }
     }

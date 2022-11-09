@@ -18,5 +18,8 @@
         <mapping class="com.minvoo.hb_one_to_one_uni.Instructor" />
         <mapping class="com.minvoo.hb_one_to_one_uni.InstructorDetail" />
 
+        <mapping class="com.minvoo.hb_one_to_one_bi.Instructor" />
+        <mapping class="com.minvoo.hb_one_to_one_bi.InstructorDetail" />
+
     </session-factory>
 </hibernate-configuration>
