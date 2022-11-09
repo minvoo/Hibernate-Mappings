@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class GetDetailsDemo {
+public class DeleteInstructorDetailDemo {
 
     public static void main(String[] args) {
 
@@ -22,9 +22,7 @@ public class GetDetailsDemo {
             InstructorDetail instructorDetail = session.get(InstructorDetail.class, 1L);
             System.out.println(instructorDetail);
 
-            System.out.println(instructorDetail.getInstructor());
-
-            System.out.println(instructorDetail.getInstructor().getInstructorDetail()); // just to check xD
+            session.delete(instructorDetail);
 
             transaction.commit();
 

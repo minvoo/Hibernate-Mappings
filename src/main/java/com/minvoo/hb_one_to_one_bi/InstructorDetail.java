@@ -24,6 +24,12 @@ public class InstructorDetail {
     // instructor owns relation in uni, in bi we need to write mappedBy property pointing to field name in related class
     // (instructorDetail) in Instructor class has @OneToOne annotation.
     @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    // CascadeType.ALL - all operations
+    // cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH } - everything except DELETE. When we
+    // delete InstructorDetail it will NOT delete Instructor entity.
+    // but we need break bi-directional link in Instructor
+    // e.g. ->  instructorDetail.getInstructor().setInstructorDetail(null);
+    // session.delete(instructorDetail)
     private Instructor instructor;
 
     public InstructorDetail(String youtubeChannel, String hobby) {
