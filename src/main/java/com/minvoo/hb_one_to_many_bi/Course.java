@@ -1,11 +1,8 @@
 package com.minvoo.hb_one_to_many_bi;
 
 
-import com.minvoo.hb_one_to_many_bi.Instructor;
-import com.minvoo.hb_one_to_one_bi.InstructorDetail;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -29,7 +26,6 @@ public class Course {
     @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinColumn(name ="instructor_id")
     private Instructor instructor;
-
     public Course(String title) {
         this.title = title;
     }
@@ -57,7 +53,6 @@ public class Course {
     public void setInstructor(Instructor instructor) {
         this.instructor = instructor;
     }
-
     @Override
     public String toString() {
         return "Course{" +

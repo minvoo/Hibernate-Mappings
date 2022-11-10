@@ -25,5 +25,9 @@
         <mapping class="com.minvoo.hb_one_to_many_bi.Instructor" />
         <mapping class="com.minvoo.hb_one_to_many_bi.Course" />
 
+        <mapping class="com.minvoo.hb_one_to_many_uni.Course" />
+        <mapping class="com.minvoo.hb_one_to_many_uni.Instructor" />
+        <mapping class="com.minvoo.hb_one_to_many_uni.InstructorDetail" />
+        <mapping class="com.minvoo.hb_one_to_many_uni.Review" />
     </session-factory>
 </hibernate-configuration>
